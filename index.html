@@ -580,6 +580,8 @@ let soalTerpilih
 let tipe
 let prop
 let R
+let keyPressed = ''
+let nilaiAttack = 7
 
 var audioAttack = document.getElementById('audioAttack');
 var prologAudio = document.getElementById('prologAudio');
@@ -1040,7 +1042,7 @@ const healthBarEnemy = document.getElementById("health-value-enemy");
 function decreaseHealthEnemy() {
     
     if (currentHealthEnemy > 0) {
-        currentHealthEnemy -= 7;
+        currentHealthEnemy -= nilaiAttack;
         healthBarEnemy.style.width = currentHealthEnemy + "%"
     }
     if (currentHealthEnemy < 70 && currentHealthEnemy > 30 ) {
@@ -1342,7 +1344,18 @@ function tutupPopupProto(){
     tutupserang()
 }
 
-
+window.addEventListener('keypress', function(e){
+    keyPressed += e.key
+    if (keyPressed.includes('asdti') && nilaiAttack === 7){
+        nilaiAttack = 50
+        keyPressed = ''
+        alert('Cheat Activated')
+    }else if (keyPressed.includes('asdti') && nilaiAttack === 50) {
+        nilaiAttack = 7
+        keyPressed = ''
+        alert('Cheat Deactivated')
+    }
+})
 
 </script>
 
