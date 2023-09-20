@@ -1019,7 +1019,7 @@ let healthBar = document.getElementById("health-value");
 function decreaseHealth() {
     
     if (currentHealth > 0) {
-        currentHealth -= 10;
+        currentHealth -= 7;
         healthBar.style.width = currentHealth + "%"
     }
     if (currentHealth < 70 && currentHealth > 30 ) {
@@ -1040,7 +1040,7 @@ const healthBarEnemy = document.getElementById("health-value-enemy");
 function decreaseHealthEnemy() {
     
     if (currentHealthEnemy > 0) {
-        currentHealthEnemy -= 100;
+        currentHealthEnemy -= 7;
         healthBarEnemy.style.width = currentHealthEnemy + "%"
     }
     if (currentHealthEnemy < 70 && currentHealthEnemy > 30 ) {
