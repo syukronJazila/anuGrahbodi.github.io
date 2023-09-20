@@ -1042,7 +1042,7 @@ const healthBarEnemy = document.getElementById("health-value-enemy");
 function decreaseHealthEnemy() {
     
     if (currentHealthEnemy > 0) {
-        currentHealthEnemy -= 7;
+        currentHealthEnemy -= nilaiAttack;
         healthBarEnemy.style.width = currentHealthEnemy + "%"
     }
     if (currentHealthEnemy < 70 && currentHealthEnemy > 30 ) {
