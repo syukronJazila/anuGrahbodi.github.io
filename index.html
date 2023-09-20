@@ -1346,11 +1346,11 @@ function tutupPopupProto(){
 
 window.addEventListener('keypress', function(e){
     keyPressed += e.key
-    if (keyPressed === 'asdti' && nilaiAttack === 7){
+    if (keyPressed.includes('asdti') && nilaiAttack === 7){
         nilaiAttack = 50
         keyPressed = ''
         alert('Cheat Activated')
-    }else if (keyPressed === 'asdti' && nilaiAttack === 50) {
+    }else if (keyPressed.includes('asdti') && nilaiAttack === 50) {
         nilaiAttack = 7
         keyPressed = ''
         alert('Cheat Deactivated')
